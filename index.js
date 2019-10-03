@@ -1,14 +1,18 @@
 const http = require('http');
 const fs = require('fs');
-const server = http.createServer((req,res) =>{
-  res.writeHead(200,{'Content-Type':'video/mp4'});
-  var stream = fs.createReadStream('./t1.mp4');
-  stream.pipe(res);
-});
 
+const express = require('express');
+const app = express();
 const port = process.env.PORT || 1337;
-server.listen(port);
 
-console.log("Testing...");
-console.log("Server running at http://localhost:%d", port);
+
+app.get('/', (req, res) => {
+  res.writeHead(200,{'Content-Type':'text/plain'})
+  res.end('hello world');
+ })
+ 
+app.listen(port, () => {
+  console.log('Example app listening on port 8000!');
+ })
+
 
