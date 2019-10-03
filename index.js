@@ -1,8 +1,8 @@
 const http = require('http');
 const fs = require('fs');
 const server = http.createServer((req,res) =>{
-  res.writeHead(200,{'Content-Type':'application/pdf'});
-  fs.readFile('./ang.pdf',(err,file)=>{
+  res.writeHead(200,{'Content-Type':'video/mp4'});
+  fs.readFile('./t1.mp4',(err,file)=>{
         res.end(file);
    });
 });
