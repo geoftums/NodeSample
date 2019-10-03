@@ -1,0 +1,11 @@
+{
+  "name": "nodeapps",
+  "version": "1.0.0",
+  "description": "simple hello world",
+  "main": "index.js",
+  "scripts": {
+     "start": "node index.js"
+  },
+  "author": "isaac",
+  "license": "ISC"
+}
